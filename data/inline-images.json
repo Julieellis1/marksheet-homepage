@@ -1,0 +1,27 @@
+{
+ "https://archive.org/download/vickydigitals/markssheet%20screenshot.webp": {
+  "file": "/assets/img/blog/inline/markssheet-20screenshot.webp",
+  "w": 1200,
+  "h": 546
+ },
+ "https://archive.org/download/vickydigitals/Gemini_Generated_Image_ut23ikut23ikut23.webp": {
+  "file": "/assets/img/blog/inline/gemini-generated-image-ut23ikut23ikut23.webp",
+  "w": 1200,
+  "h": 896
+ },
+ "https://archive.org/download/vickydigitals/vickydigitals.jpg": {
+  "file": "/assets/img/blog/inline/vickydigitals.webp",
+  "w": 1200,
+  "h": 675
+ },
+ "https://archive.org/download/price-ladder-chart_202609/price-ladder-chart.webp": {
+  "file": "/assets/img/blog/inline/price-ladder-chart.webp",
+  "w": 960,
+  "h": 1200
+ },
+ "https://archive.org/download/price-ladder-chart_202609/year1-cost-bar-chart.webp": {
+  "file": "/assets/img/blog/inline/year1-cost-bar-chart.webp",
+  "w": 1200,
+  "h": 751
+ }
+}

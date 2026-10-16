@@ -1,0 +1,22 @@
+# --- App routes (the Next.js school portal) -------------------------------------------
+# When this static site takes over www.marksheet.top, move the app to its own origin
+# (e.g. app.marksheet.top — CONFIRM), set settings.json -> appOrigin to it, then uncomment:
+# /login            https://app.marksheet.top/login            200
+# /register         https://app.marksheet.top/register         200
+# /verify           https://app.marksheet.top/verify           200
+# /verify/*         https://app.marksheet.top/verify/:splat    200
+# /referral/login   https://app.marksheet.top/referral/login   200
+# /app/*            https://app.marksheet.top/app/:splat       200
+# /console/*        https://app.marksheet.top/console/:splat   200
+# /api/*            https://app.marksheet.top/api/:splat       200
+
+# --- Old marketing URLs -> new ----------------------------------------------------------
+/features/curriculum-syllabus-lesson-notes   /features/curriculum-syllabus/   301
+/features/landing-public-flows               /verify-a-result/                301
+/legal/privacy      /legal/privacy/        301
+/legal/terms        /legal/terms/          301
+/legal/cookies      /legal/cookies/        301
+/legal/refund       /legal/refund/         301
+/legal/acceptable-use /legal/acceptable-use/ 301
+/#demo   /demo/   301
+/data/*  /404.html  404!

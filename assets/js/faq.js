@@ -1,0 +1,3 @@
+(function(){var root=document.querySelector('[data-faq]');if(!root)return;var q=root.querySelector('input[type=search]'),items=[].slice.call(root.querySelectorAll('details')),cats=[].slice.call(root.querySelectorAll('.faq-cat')),out=root.querySelector('[data-faq-count]');
+ q.addEventListener('input',function(){var t=q.value.trim().toLowerCase(),n=0;items.forEach(function(d){var ok=!t||d.textContent.toLowerCase().indexOf(t)>-1;d.hidden=!ok;if(ok)n++;if(t&&ok)d.open=true;});
+  cats.forEach(function(c){c.hidden=!c.querySelector('details:not([hidden])')});out.textContent=t?(n+' answer'+(n===1?'':'s')+' found'):'';});})();

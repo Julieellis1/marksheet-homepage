@@ -1,0 +1,18 @@
+{
+ "name":"Marksheet",
+ "siteUrl":"https://www.marksheet.top",
+ "appOrigin":"https://www.marksheet.top",
+ "appPaths":{"login":"/login","register":"/register","verify":"/verify","referralJoin":"/referral","referralLogin":"/referral/login"},
+ "tagline":"From syllabus to verified report card — one term, one place.",
+ "email":"info@marksheet.top",
+ "supportEmail":"support@marksheet.top",
+ "phone":"0704 281 9602",
+ "phoneE164":"+2347042819602",
+ "whatsapp":"2347042819602",
+ "address":{"street":"1, Elder Adedigba Street, Suberu-Oje","area":"Surulere","city":"Lagos","country":"Nigeria"},
+ "pricing":{"monthly":35000,"termly":100000,"registrationFee":250000,"registrationFeeConfirmed":false},
+ "referral":{"commission":50000,"rate":20},
+ "conceptPreview":true,
+ "analyticsDomain":"",
+ "showLiveCounters":false
+}

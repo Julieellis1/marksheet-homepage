@@ -1,0 +1,91 @@
+# Decap CMS — edits the JSON in site/data; Netlify rebuilds with tools/build.py on every save.
+backend:
+  name: git-gateway
+  branch: main
+media_folder: site/assets/img/uploads
+public_folder: /assets/img/uploads
+collections:
+  - name: settings
+    label: Settings
+    files:
+      - name: settings
+        label: Contact, prices & links
+        file: site/data/settings.json
+        fields:
+          - {name: email, label: Sales email}
+          - {name: supportEmail, label: Support email}
+          - {name: phone, label: Phone (display)}
+          - {name: phoneE164, label: Phone (+234 format)}
+          - {name: whatsapp, label: WhatsApp number (digits only)}
+          - {name: appOrigin, label: School portal origin (e.g. https://app.marksheet.top)}
+          - {name: conceptPreview, label: Show redesign-preview ribbon, widget: boolean}
+          - {name: showLiveCounters, label: Show live platform counters, widget: boolean}
+          - {name: analyticsDomain, label: Plausible domain (blank = no analytics), required: false}
+          - name: pricing
+            label: Pricing
+            widget: object
+            fields:
+              - {name: monthly, label: Monthly from (₦), widget: number}
+              - {name: termly, label: Termly from (₦), widget: number}
+              - {name: registrationFee, label: Registration fee (₦), widget: number}
+              - {name: registrationFeeConfirmed, label: Registration fee confirmed for publishing, widget: boolean}
+          - name: referral
+            label: Referral programme
+            widget: object
+            fields:
+              - {name: commission, label: Commission per school (₦), widget: number}
+              - {name: rate, label: Rate (%), widget: number}
+          - {name: tagline, label: Tagline}
+          - {name: siteUrl, label: Site URL}
+          - {name: address, label: Address, widget: object, fields: [{name: street, label: Street}, {name: area, label: Area}, {name: city, label: City}, {name: country, label: Country}]}
+          - {name: appPaths, label: Portal paths, widget: object, fields: [{name: login, label: Login}, {name: register, label: Register}, {name: verify, label: Verify}, {name: referralJoin, label: Referral join}, {name: referralLogin, label: Referral login}]}
+      - name: faq
+        label: FAQ
+        file: site/data/faq.json
+        fields:
+          - name: items
+            label: Questions
+            widget: list
+            fields:
+              - {name: cat, label: Category, widget: select, options: ["Exams & results", "Getting started", "Pricing & licence", "Data & security", "Parents & app"]}
+              - {name: q, label: Question}
+              - {name: a, label: Answer, widget: text}
+      - name: features
+        label: Feature pages
+        file: site/data/features.json
+        fields:
+          - name: items
+            label: Modules
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {name: slug, label: URL slug}
+              - {name: name, label: Name}
+              - {name: category, label: Category, widget: select, options: [Assessment, Teaching, Operations, Administration, Finance, Communication]}
+              - {name: icon, label: Icon key}
+              - {name: summary, label: Summary, widget: text}
+              - {name: headline, label: Old tagline, required: false}
+              - {name: challenge, label: The challenge, widget: text}
+              - {name: solution, label: The solution, widget: text}
+              - {name: benefits, label: Benefits, widget: list, fields: [{name: t, label: Title}, {name: d, label: Detail, widget: text}]}
+              - {name: simple, label: In simple terms, widget: text}
+      - name: posts
+        label: Blog index (metadata)
+        file: site/data/posts.json
+        fields:
+          - name: items
+            label: Posts
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {name: slug, label: Slug}
+              - {name: title, label: Title}
+              - {name: date, label: Date (e.g. 27 September 2026)}
+              - {name: category, label: Category}
+              - {name: description, label: Description, widget: text}
+              - {name: image, label: Hero image file}
+              - {name: imageAlt, label: Hero alt text}
+              - {name: imageW, label: Image width, widget: number}
+              - {name: imageH, label: Image height, widget: number}
+              - {name: minutes, label: Reading minutes, widget: number}
+              - {name: sourceUrl, label: Original URL}
